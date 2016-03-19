@@ -1,4 +1,4 @@
-# Slim Play app giter8 template
+# Slim Play G8 template
 
 Generate your own version of the [slim-play app](https://github.com/lloydmeta/slim-play)
 
