@@ -7,14 +7,24 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 scalaVersion := "2.11.8"
 
 libraryDependencies ++= Seq(
-  jdbc,
-  cache,
   ws,
-  specs2 % Test
+  "org.scalatestplus.play" %% "scalatestplus-play" % "$scalatestplay_version$" % Test
 )
 
-resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
-
-// Play provides two styles of routers, one expects its actions to be injected, the
-// other, legacy style, accesses its actions statically.
-routesGenerator := InjectedRoutesGenerator
+scalacOptions ++= Seq(
+  "-deprecation",
+  "-encoding", "UTF-8",
+  "-feature",
+  "-language:existentials",
+  "-language:higherKinds",
+  "-language:implicitConversions",
+  "-unchecked",
+  "-Xfatal-warnings",
+  "-Xlint",
+  "-Yno-adapted-args",
+  "-Ywarn-dead-code",
+  "-Ywarn-numeric-widen",
+  "-Ywarn-value-discard",
+  "-Xfuture",
+  "-Ywarn-unused-import"
+)
