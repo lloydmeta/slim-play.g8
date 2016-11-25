@@ -1,4 +1,4 @@
-# Slim Play G8 template
+# Slim Play G8 template [![Build Status](https://travis-ci.org/lloydmeta/slim-play.g8.svg?branch=master)](https://travis-ci.org/lloydmeta/slim-play.g8)
 
 Generate your own version of the [slim-play app](https://github.com/lloydmeta/slim-play)
 
