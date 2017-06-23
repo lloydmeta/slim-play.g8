@@ -1,14 +1,15 @@
 import play.api.ApplicationLoader.Context
 import play.api._
-import play.api.libs.concurrent.Execution.Implicits._
 import play.api.mvc.Results._
-import play.api.mvc._
 import play.api.routing.Router
 import play.api.routing.sird._
 
 import scala.concurrent.Future
 
 class AppComponents(context: Context) extends BuiltInComponentsFromContext(context) {
+
+  val httpFilters    = Nil
+  private val Action = defaultActionBuilder
 
   val router: Router = Router.from {
 
