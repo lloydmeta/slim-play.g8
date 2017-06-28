@@ -28,3 +28,7 @@ scalacOptions ++= Seq(
   "-Xfuture",
   "-Ywarn-unused-import"
 )
+
+scalafmtOnCompile := true
+
+wartremoverErrors in (Compile, compile) ++= Warts.unsafe
