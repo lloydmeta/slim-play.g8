@@ -6,10 +6,9 @@ import play.api.routing.sird._
 
 import scala.concurrent.Future
 
-class AppComponents(context: Context) extends BuiltInComponentsFromContext(context) {
-
-  val httpFilters    = Nil
-  private val Action = defaultActionBuilder
+class AppComponents(context: Context)
+  extends BuiltInComponentsFromContext(context)
+  with NoHttpFiltersComponents {
 
   val router: Router = Router.from {
 
