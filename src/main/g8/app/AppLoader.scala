@@ -9,7 +9,7 @@ import scala.concurrent.Future
 class AppComponents(context: Context) extends BuiltInComponentsFromContext(context) {
 
   val httpFilters    = Nil
-  private val Action = defaultActionBuilder
+  protected val Action = defaultActionBuilder
 
   val router: Router = Router.from {
 
