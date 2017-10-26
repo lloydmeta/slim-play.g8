@@ -1,3 +1,5 @@
+package wiring
+
 import play.api.ApplicationLoader.Context
 import play.api._
 import play.api.mvc.Results._
@@ -13,15 +15,15 @@ class AppComponents(context: Context)
   val router: Router = Router.from {
 
     // Essentially copied verbatim from the SIRD example
-    case GET(p"/hello/$to") => Action {
-      Ok(s"Hello $to")
+    case GET(p"/hello/\$to") => Action {
+      Ok(s"Hello \$to")
     }
 
     /*
      Use Action.async to return a Future result (sqrt can be intense :P)
      Note the use of double(num) to bind only numbers (built-in :)
       */
-    case GET(p"/sqrt/${double(num)}") => Action.async {
+    case GET(p"/sqrt/\${double(num)}") => Action.async {
       Future {
         Ok(Math.sqrt(num).toString)
       }
