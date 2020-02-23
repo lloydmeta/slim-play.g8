@@ -8,7 +8,7 @@ scalaVersion := "2.13.1"
 
 libraryDependencies ++= Seq(
   ws                       % Test,
-  "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
+  "org.scalatestplus.play" %% "scalatestplus-play" % "$scalatestplay_version$" % Test
 )
 
 scalacOptions ++= Seq(
