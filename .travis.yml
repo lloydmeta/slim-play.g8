@@ -3,10 +3,10 @@ sudo: false
 language: scala
 
 jdk:
-  - oraclejdk8
+  - openjdk11
 
 scala:
-  - 2.12.3
+  - 2.13.1
 
 script:
   - sbt new file://${TRAVIS_BUILD_DIR} --name=slim-play-test
@@ -15,7 +15,7 @@ script:
 
 cache:
   directories:
-  - $HOME/.sbt/0.13
+  - $HOME/.sbt/1.0
   - $HOME/.sbt/boot/scala*
   - $HOME/.sbt/cache
   - $HOME/.sbt/launchers

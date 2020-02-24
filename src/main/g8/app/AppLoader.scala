@@ -1,5 +1,3 @@
-package wiring
-
 import play.api.ApplicationLoader.Context
 import play.api._
 import play.api.mvc.Results._
@@ -8,9 +6,10 @@ import play.api.routing.sird._
 
 import scala.concurrent.Future
 
-class AppComponents(context: Context)
-    extends BuiltInComponentsFromContext(context)
-    with NoHttpFiltersComponents {
+class AppComponents(context: Context) extends BuiltInComponentsFromContext(context) {
+
+  val httpFilters     = Nil
+  override val Action = defaultActionBuilder
 
   val router: Router = Router.from {
 
