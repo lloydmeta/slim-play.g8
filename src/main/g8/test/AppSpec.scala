@@ -12,7 +12,7 @@ class AppSpec
 
   describe("/hello/\$name") {
     it("""should respond with "Hello \$name"""") {
-      whenReady(ws.url(s"http://localhost:$port/hello/joe").get()) { r =>
+      whenReady(ws.url(s"http://localhost:\$port/hello/joe").get()) { r =>
         r.body shouldBe "Hello joe"
       }
     }
